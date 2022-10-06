@@ -1,5 +1,6 @@
 import fetch from "node-fetch";
 import fs from "fs";
+import path from "path";
 
 const DIR = "results";
 
@@ -40,7 +41,7 @@ function createSortMap(tokens) {
 	}, {});
 }
 
-async function run() {
+async function dlTokens() {
 	try {
 		const page = 1;
 
@@ -63,4 +64,21 @@ async function run() {
 	}
 }
 
-run();
+async function combineTokens() {
+	const output = [];
+
+	const jsonsInDir = fs
+		.readdirSync("./results")
+		.filter((file) => path.extname(file) === ".json");
+
+	jsonsInDir.forEach((file) => {
+		const fileData = fs.readFileSync(path.join("./results", file));
+		const json = JSON.parse(fileData.toString());
+		output.push(...json);
+	});
+
+	dlFile("all.json", JSON.stringify(output, 0, 4));
+}
+
+// dlTokens();
+combineTokens();
