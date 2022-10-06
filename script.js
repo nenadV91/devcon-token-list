@@ -42,7 +42,7 @@ function createSortMap(tokens) {
 
 async function run() {
 	try {
-		const page = 3;
+		const page = 1;
 
 		const top = await fetchCoingeckoTop(50, page);
 		const all = await fetchCoingeckoAll();
@@ -54,7 +54,7 @@ async function run() {
 		const sortMap = createSortMap(top);
 		const sorted = filtered.sort(
 			(a, b) =>
-				sortMap[b.symbol.toLowerCase()] - sortMap[a.symbol.toLowerCase()]
+				sortMap[a.symbol.toLowerCase()] - sortMap[b.symbol.toLowerCase()]
 		);
 
 		dlFile(`tokens-${page}.json`, JSON.stringify(sorted, 0, 4));
