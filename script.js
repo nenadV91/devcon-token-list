@@ -77,7 +77,7 @@ async function combineTokens() {
 		output.push(...json);
 	});
 
-	dlFile("all.json", JSON.stringify(output, 0, 4));
+	dlFile("combined.json", JSON.stringify(output, 0, 4));
 }
 
 // dlTokens();
