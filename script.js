@@ -2,7 +2,7 @@ import fetch from "node-fetch";
 import fs from "fs";
 import path from "path";
 
-const DIR = "results";
+const DIR = "output";
 
 async function fetchCoingeckoTop(limit, page) {
   const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=${limit}&page=${page}&sparkline=false&category=ethereum-ecosystem`;
@@ -82,12 +82,9 @@ async function combineWithCow(tokens) {
   return output;
 }
 
-async function dlTokens() {
+async function dlTokens(page = 1, all) {
   try {
-    const page = 1;
-
     const top = await fetchCoingeckoTop(50, page);
-    const all = await fetchCoingeckoAll();
 
     const filtered = all.tokens.filter((c) =>
       top.some((t) => t.symbol.toLowerCase() === c.symbol.toLowerCase())
@@ -109,13 +106,13 @@ async function combineTokens(version) {
   const output = [];
 
   const jsonsInDir = fs
-    .readdirSync("./results")
+    .readdirSync(`./${DIR}`)
     .filter(
       (file) => path.extname(file) === ".json" && file.startsWith("tokens")
     );
 
   jsonsInDir.forEach((file) => {
-    const fileData = fs.readFileSync(path.join("./results", file));
+    const fileData = fs.readFileSync(path.join(`./${DIR}`, file));
     const json = JSON.parse(fileData.toString());
     output.push(...json);
   });
@@ -125,5 +122,18 @@ async function combineTokens(version) {
   dlFile("combined.json", createFinalResult(withCow, version));
 }
 
-// dlTokens();
-combineTokens({ patch: 8 });
+async function runAll() {
+  const all = await fetchCoingeckoAll();
+
+  function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  for (let i = 0; i < 5; i++) {
+    await dlTokens(i, all);
+    await sleep(i * 2000);
+  }
+  combineTokens({ patch: 8 });
+}
+
+runAll();

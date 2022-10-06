@@ -1,22 +1,6 @@
 [
     {
         "chainId": 1,
-        "address": "0xff20817765cb7f73d4bde2e66e067e58d11095c2",
-        "name": "Amp",
-        "symbol": "AMP",
-        "decimals": 18,
-        "logoURI": "https://assets.coingecko.com/coins/images/12409/thumb/amp-200x200.png?1599625397"
-    },
-    {
-        "chainId": 1,
-        "address": "0x1cf4592ebffd730c7dc92c1bdffdfc3b9efcf29a",
-        "name": "Waves",
-        "symbol": "WAVES",
-        "decimals": 18,
-        "logoURI": "https://assets.coingecko.com/coins/images/425/thumb/waves.png?1548386117"
-    },
-    {
-        "chainId": 1,
         "address": "0x320623b8e4ff03373931769a31fc52a4e78b5d70",
         "name": "Reserve Rights",
         "symbol": "RSR",
@@ -25,11 +9,27 @@
     },
     {
         "chainId": 1,
+        "address": "0xff20817765cb7f73d4bde2e66e067e58d11095c2",
+        "name": "Amp",
+        "symbol": "AMP",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/12409/thumb/amp-200x200.png?1599625397"
+    },
+    {
+        "chainId": 1,
         "address": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
         "name": "Convex Finance",
         "symbol": "CVX",
         "decimals": 18,
         "logoURI": "https://assets.coingecko.com/coins/images/15585/thumb/convex.png?1621256328"
+    },
+    {
+        "chainId": 1,
+        "address": "0x1cf4592ebffd730c7dc92c1bdffdfc3b9efcf29a",
+        "name": "Waves",
+        "symbol": "WAVES",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/425/thumb/waves.png?1548386117"
     },
     {
         "chainId": 1,
@@ -177,14 +177,6 @@
     },
     {
         "chainId": 1,
-        "address": "0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e",
-        "name": "yearn finance",
-        "symbol": "YFI",
-        "decimals": 18,
-        "logoURI": "https://assets.coingecko.com/coins/images/11849/thumb/yfi-192x192.png?1598325330"
-    },
-    {
-        "chainId": 1,
         "address": "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2",
         "name": "Sushi",
         "symbol": "SUSHI",
@@ -193,11 +185,11 @@
     },
     {
         "chainId": 1,
-        "address": "0x8290333cef9e6d528dd5618fb97a76f268f3edd4",
-        "name": "Ankr",
-        "symbol": "ANKR",
+        "address": "0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e",
+        "name": "yearn finance",
+        "symbol": "YFI",
         "decimals": 18,
-        "logoURI": "https://assets.coingecko.com/coins/images/4324/thumb/U85xTl2.png?1608111978"
+        "logoURI": "https://assets.coingecko.com/coins/images/11849/thumb/yfi-192x192.png?1598325330"
     },
     {
         "chainId": 1,
@@ -206,6 +198,14 @@
         "symbol": "CVXCRV",
         "decimals": 18,
         "logoURI": "https://assets.coingecko.com/coins/images/15586/thumb/convex-crv.png?1621255952"
+    },
+    {
+        "chainId": 1,
+        "address": "0x8290333cef9e6d528dd5618fb97a76f268f3edd4",
+        "name": "Ankr",
+        "symbol": "ANKR",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/4324/thumb/U85xTl2.png?1608111978"
     },
     {
         "chainId": 1,
@@ -225,14 +225,6 @@
     },
     {
         "chainId": 1,
-        "address": "0x9992ec3cf6a55b00978cddf2b27bc6882d88d1ec",
-        "name": "Polymath",
-        "symbol": "POLY",
-        "decimals": 18,
-        "logoURI": "https://assets.coingecko.com/coins/images/2784/thumb/inKkF01.png?1605007034"
-    },
-    {
-        "chainId": 1,
         "address": "0x3d1f5e133c2988d14a0c13bdd2b58d260e74ef9a",
         "name": "Omega Finance",
         "symbol": "OMG",
@@ -246,6 +238,14 @@
         "symbol": "OMG",
         "decimals": 18,
         "logoURI": "https://assets.coingecko.com/coins/images/776/thumb/OMG_Network.jpg?1591167168"
+    },
+    {
+        "chainId": 1,
+        "address": "0x9992ec3cf6a55b00978cddf2b27bc6882d88d1ec",
+        "name": "Polymath",
+        "symbol": "POLY",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/2784/thumb/inKkF01.png?1605007034"
     },
     {
         "chainId": 1,
@@ -433,10 +433,26 @@
     },
     {
         "chainId": 1,
-        "address": "0x3c4b6e6e1ea3d4863700d7f76b36b7f3d3f13e3d",
-        "name": "Voyager VGX",
-        "symbol": "VGX",
-        "decimals": 8,
-        "logoURI": "https://assets.coingecko.com/coins/images/794/thumb/Voyager-vgx.png?1575693595"
+        "address": "0x307d45afbb7e84f82ef3d251a6bb0f00edf632e4",
+        "name": "PLANET",
+        "symbol": "PLA",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/9279/thumb/LOGO_BLACK.png?1565731302"
+    },
+    {
+        "chainId": 1,
+        "address": "0x0198f46f520f33cd4329bd4be380a25a90536cd5",
+        "name": "PlayChip",
+        "symbol": "PLA",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/4567/thumb/pla.png?1547039851"
+    },
+    {
+        "chainId": 1,
+        "address": "0x3a4f40631a4f906c2bad353ed06de7a5d3fcb430",
+        "name": "PlayDapp",
+        "symbol": "PLA",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/14316/thumb/54023228.png?1615366911"
     }
 ]
